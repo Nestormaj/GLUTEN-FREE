@@ -1,0 +1,296 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    color: rgb(0, 0, 0);
+    background-color: #63cab4;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+.nav-img{
+    width:65px;
+    
+}
+
+a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+/* NAVEGACION */
+.nav{
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 20px 0px;
+
+}
+
+.nav ul{
+    display: flex;
+}
+
+.nav ul li{
+    padding: 10px;
+}
+
+.nav ul li a{
+    padding: 5px;
+}
+
+.nav ul li a:hover{
+    border-bottom: 2px solid #fff;
+
+}
+
+.nav ul.nav-menu{
+    flex: 1;
+    padding-left: 5px;
+}
+
+.menu-btn{
+    position: absolute;
+    cursor: pointer;
+    top: 16px;
+    right: 30px;
+    z-index: 2;
+    font-size: 1.5rem;
+    display: none;
+}
+
+/*SEGUNDA PARTE*/
+
+header{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 430px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+}
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #262626;
+    color: #fff;
+    font-size: 15px;
+    border: 2px solid #fff;
+    margin: 10px 0px;
+}
+.btn:hover{
+    opacity: .9;
+}
+
+.header h2,
+.header p {
+    margin-bottom: 10px;
+}
+
+/*NOTICIAS*/
+
+.noticias{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    margin-top: 20px 0px;
+}
+
+.noticias h3{
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.noticias a {
+    padding: 10px 0;
+   color: rgb(255, 255, 255); 
+   text-transform: uppercase;
+   display: inline-block;
+   font-weight: bold;
+}
+
+.noticias a:hover{
+    text-decoration: underline;
+}
+
+/*BANNER DOS*/
+
+.section{
+    width: 100%;
+    height: 350px;
+    margin-bottom: 40px;
+    background-color: rgb(0, 0, 0);
+}
+
+.content{
+    width: 40%;
+    padding: 90px 0 0 30px;
+    color: #fff;
+
+}
+
+.content p,
+.content h2{
+
+    margin: 10px 0 20px 0;
+}
+
+/*SECTION-TWO*/
+
+.section-two{
+    width: 100%;
+    height: 350px;
+    margin-bottom: 40px;
+    background-color: aqua;
+}
+
+.section-two .content{
+    width: 40%;
+    padding: 90px 0 0 30px;
+    color: #fff;
+
+}
+
+.section-two .content p,
+.section-two .content h2{
+
+    margin: 10px 0 20px 0;
+}
+
+
+/*SOCIAL*/
+
+.social{
+    margin: 50px; 
+}
+
+.social p{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links a{
+    margin: 0 25px;
+}
+
+.links a i{
+    font-size: 3rem;
+}
+
+/*FOOTER*/
+
+.footer-links{
+    background-color: gray;
+    color: #fff;
+    font-size: 12px;
+    padding: 35px 0;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footer-container ul{
+    margin: 0 auto;
+}
+
+.footer-container ul li{
+    line-height: 2.5;
+}
+
+.footer{
+    background: #2f3640;
+    color: #fff;
+    font-size: 14px;
+    padding: 20px 0;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 700px){
+    
+    .menu-btn{
+        display: block;
+    }
+    
+    .nav ul.nav-menu{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: gray;
+        height: 100%;
+        padding: 30px;
+        opacity: .9;
+        transform: translatex(-400px);
+        transition: transform .5s ease-in-out;
+        
+    }
+
+    .nav ul.nav-menu.show{
+        transform: translatex(-20px);
+
+    }
+
+    .btn-search{
+       margin-right: 40px; 
+    }
+    
+    .noticias{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section .content,
+    .section-two .content{
+        width: 80%;
+    }
+
+    .footer-links .footer-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 500px){
+    .noticias{
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links .footer-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
