@@ -6,7 +6,7 @@
 
 body{
     color: rgb(0, 0, 0);
-    background-color: #63cab4;
+    background-color: #ffffff;
     font-size: 16px;
     font-family: 'Oswald', sans-serif;
 
@@ -38,7 +38,7 @@ ul{
     align-items: center;
     height: 70px;
     padding: 20px 0px;
-
+   
 }
 
 .nav ul{
@@ -51,10 +51,12 @@ ul{
 
 .nav ul li a{
     padding: 5px;
+    color: black;
 }
 
 .nav ul li a:hover{
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    color: red;
 
 }
 
@@ -73,7 +75,23 @@ ul{
     display: none;
 }
 
+hr{
+    height: 50px;
+}
+
 /*SEGUNDA PARTE*/
+
+#carouselExampleCaptions{
+    width: 90%;
+    padding-left: 100px;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    z-index: 0;}
+
+    .carousel-caption {
+        color: rgb(0, 0, 0);
+    }
 
 header{
     width: 100%;
@@ -99,12 +117,30 @@ header{
     margin: 10px 0px;
 }
 .btn:hover{
-    opacity: .9;
+    color: red;
 }
 
 .header h2,
 .header p {
     margin-bottom: 10px;
+}
+
+.titulo{
+    background-color: black;
+    border-radius: 4px;
+    padding: 10px 0;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    animation-duration: 2s;
+    animation-delay: 3s;
+
+}
+.titulo:hover{
+    border-bottom: 2px solid black;
+}
+.titulo h2{
+    font-size: 50px;
 }
 
 /*NOTICIAS*/
@@ -116,9 +152,20 @@ header{
     margin-top: 20px 0px;
 }
 
+.news{
+    border:ridge rgb(238, 234, 6) 4px;
+    border-radius: 3px;
+}
+
 .noticias h3{
     font-size: 20px;
     margin: 10px 0;
+    text-align: center;
+}
+
+.noticias p{
+    text-align: center;
+    margin: 0;
 }
 
 .noticias a {
@@ -132,6 +179,16 @@ header{
 .noticias a:hover{
     text-decoration: underline;
 }
+.imagen{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+}
 
 /*BANNER DOS*/
 
@@ -139,13 +196,13 @@ header{
     width: 100%;
     height: 350px;
     margin-bottom: 40px;
-    background-color: rgb(0, 0, 0);
+    background: url(..//imagenes/analisis.jpg) no-repeat center center/cover;
 }
 
 .content{
-    width: 40%;
-    padding: 90px 0 0 30px;
-    color: #fff;
+    width: 65%;
+    padding: 65px 0 0 30px;
+    color: rgb(0, 0, 0);
 
 }
 
@@ -155,19 +212,23 @@ header{
     margin: 10px 0 20px 0;
 }
 
+.content p{
+    text-align: justify;
+}
+
 /*SECTION-TWO*/
 
 .section-two{
     width: 100%;
     height: 350px;
     margin-bottom: 40px;
-    background-color: aqua;
+    background: url(../imagenes/contaminacion-cruzada-con-gluten-1.jpg) no-repeat center center/cover;
 }
 
 .section-two .content{
-    width: 40%;
+    width: 65%;
     padding: 90px 0 0 30px;
-    color: #fff;
+    color: rgb(255, 255, 255);
 
 }
 
@@ -180,11 +241,11 @@ header{
 
 /*SOCIAL*/
 
-.social{
+#social{
     margin: 50px; 
 }
 
-.social p{
+#social p{
     text-align: center;
     font-size: 30px;
     margin-bottom: 20px;
@@ -249,12 +310,12 @@ header{
         position: absolute;
         top: 0;
         left: 0;
-        background: gray;
-        height: 100%;
+        background: rgb(158, 177, 115);
+        height: 1013px;
         padding: 30px;
-        opacity: .9;
         transform: translatex(-400px);
         transition: transform .5s ease-in-out;
+        z-index: 1;
         
     }
 
@@ -268,7 +329,12 @@ header{
     }
     
     .noticias{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .section,
+    .section-two{
+        height: 450px;
     }
 
     .section .content,
@@ -288,6 +354,14 @@ header{
 
     .footer-links .footer-container{
         grid-template-columns: 1fr;
+    }
+
+    .section{
+        height: 550px;
+    }
+
+    .section-two{
+    height: 500px;
     }
 }
 
