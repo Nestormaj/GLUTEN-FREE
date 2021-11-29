@@ -126,7 +126,7 @@ header{
 }
 
 .titulo{
-    background-color: black;
+    background-color: #fdff6d;
     border-radius: 4px;
     padding: 10px 0;
     text-align: center;
@@ -136,9 +136,7 @@ header{
     animation-delay: 3s;
 
 }
-.titulo:hover{
-    border-bottom: 2px solid black;
-}
+
 .titulo h2{
     font-size: 50px;
 }
@@ -153,7 +151,7 @@ header{
 }
 
 .news{
-    border:ridge rgb(238, 234, 6) 4px;
+
     border-radius: 3px;
 }
 
@@ -237,6 +235,23 @@ header{
 
     margin: 10px 0 20px 0;
 }
+/*KCAO*/
+.ultimo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ultimo h2{
+    font-size: 50px;
+    color: red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.ultimo p{
+    font-size: 25px;
+    text-align: center;
+}
 
 
 /*SOCIAL*/
@@ -265,7 +280,12 @@ header{
     font-size: 3rem;
 }
 
-/*FOOTER*/
+.links a i:hover{
+    color: red;
+
+}
+
+/*FOOTER
 
 .footer-links{
     background-color: gray;
@@ -289,9 +309,10 @@ header{
 .footer-container ul li{
     line-height: 2.5;
 }
+*/
 
 .footer{
-    background: #2f3640;
+    background: #fdff6d;
     color: #fff;
     font-size: 14px;
     padding: 20px 0;
@@ -299,7 +320,13 @@ header{
     padding-bottom: 20px;
 }
 
-@media (max-width: 700px){
+#boton{
+    background-color: #fdff6d;
+    border: none;
+    color: rgb(0, 0, 0);
+}
+
+@media (max-width: 800px){
     
     .menu-btn{
         display: block;
@@ -310,13 +337,17 @@ header{
         position: absolute;
         top: 0;
         left: 0;
-        background: rgb(158, 177, 115);
+        background: rgb(221, 207, 83);
         height: 1013px;
         padding: 30px;
         transform: translatex(-400px);
         transition: transform .5s ease-in-out;
-        z-index: 1;
+        z-index: 3;
         
+    }
+
+    .nav ul.nav-menu li{
+        font-size: 1.3rem;
     }
 
     .nav ul.nav-menu.show{
@@ -330,6 +361,8 @@ header{
     
     .noticias{
         grid-template-columns: repeat(1, 1fr);
+        width: 80%;
+        margin-left: 50px;
     }
 
     .section,
@@ -345,11 +378,32 @@ header{
     .footer-links .footer-container{
         grid-template-columns: repeat(2,1fr);
     }
+    .ultimo h2{
+        text-align: center;
+    }
+    .ultimo p{
+        text-align: justify;
+    }
+
+    .news{
+        width: 80%;
+        margin-left: 50px;
+    }
+
+    #carouselExampleCaptions{
+    width: 100%;
+    padding: 0;
+    }
 }
 
-@media (max-width: 500px){
+@media (max-width: 650px){
     .noticias{
         grid-template-columns: 1fr;
+    }
+
+    .news{
+        width: 90%;
+        margin-left: 10px;
     }
 
     .footer-links .footer-container{
@@ -362,6 +416,12 @@ header{
 
     .section-two{
     height: 500px;
+    }
+
+    #carouselExampleCaptions{
+        width: 100%;
+        height: auto;
+        padding: 0;
     }
 }
 
